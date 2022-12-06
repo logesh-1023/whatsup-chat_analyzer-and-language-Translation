@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Services</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/favicon.ico" rel="icon">
+  <link href="static/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="/static/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/aos.css">
+  <link rel="stylesheet" type="text/css" href="/static/glightbox.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/swiper-bundle.min.css">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" type="text/css" href="/static/main.css">
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <script type="module" src="router2.js"></script>
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>WhatsApp Text Analyzer And Language Translation<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active" >Service</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url(/static/businessmen-working-strategic-planning.jpg);">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Services</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Services</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon"><h2>&#169</h2>
+              </div>
+              <h3>Please Provide Your WhatsApp Chat Exported To Be Analyzed And For Abusive Word Notification</h3>
+              <form class="grid" action="/submit" method="post">
+               <input type="file" id="Files" name="myFile" value="{{request.form.file}}"><br><br>
+               Enter A Email: <input type="text" id="Image" name=email value={{request.form.email}}><br><br>
+               <input type="submit" class="file_submit">
+              </form>
+            </div>
+          </div><!-- End Service Item -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div>
+                <em >YOU CAN PRINT THE REPORT OR YOU CAN ALSO DOWNLOAD THE ANALYZED REPORT AS A PDF FORMAT FOR FREE</em><br>
+                <centre><img src="/static/whatsup wall.png" height="300px" width="400px"></centre>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon"><h2>&#169</h2>
+              </div>
+              <h3>Please Provide Your Image For Translation</h3>
+              <form class="grid" action="/result" method="post">
+               <input type="file" id="Files" name="image" value="{{request.form.image}}"><br><br>
+               <h6>Select Language to be Translated </h6>
+                <select name="Language" value="{{request.form.language}}">
+                 <option value="ta">Tamil</option>
+                 <option value="ml">Malayalam</option>
+                 <option value="gu">Gujarti</option>
+                 <option value="kn">Kannada</option>
+                 <option value="te">Telugu</option>
+                 <option value="ne">Nepali</option>
+                 <option value="pa">Punjabi</option>
+                 <option value="de">German</option>
+                 <option value="en">English</option>
+                 <option value="es">Spanish</option>
+                 <option value="ar">Arabic</option>
+                 <option value="th">Thai</option>
+                 <option value="la">Latin</option>
+                 <option value="zh-cn">Chineese</option>
+                 <option value="bn">Bengali</option>
+                 <option value="hr">Crotian</option>
+                 <option value="cs">Czech</option></select>
+               <input type="submit" class="file_submit">
+              </form>
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>WhatsApp Text Analyzer And Language Translation</h3>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> wapenquiry@gmail.com<br>
+              </p>
+            </div>
+          </div><!-- End footer info column-->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span> whatsApp Text Analyzer and Language Translation</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="" class="scroll-top d-flex align-items-center justify-content-center"><h2>&#8593</h2></a>
+
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/bootstrap.bundle.min.js"></script>
+  <script src="/static/aos.js"></script>
+  <script src="/static/glightbox.min.js"></script>
+  <script src="/static/isotope.pkgd.min.js"></script>
+  <script src="/static/swiper-bundle.min.js"></script>
+  <script src="/static/purecounter_vanilla.js"></script>
+  <script src="/static/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/main.js"></script>
+
+</body>
+
+</html>

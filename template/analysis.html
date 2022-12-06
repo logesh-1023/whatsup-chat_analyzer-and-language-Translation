@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Analyzer Result</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/all.min.css" rel="stylesheet">
+  <link href="/static/aos.css" rel="stylesheet">
+  <link href="/static/glightbox.min.css" rel="stylesheet">
+  <link href="/static/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.2.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>WhatsApp Text Analyzer And Language Translation<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Service</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url(/static/report.png);">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>FINAL REPORT</h2>
+      </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <button id="button">Generate PDF</button>
+        <div class="card" id="makepdf">
+          <ol style="list-style-type: none;">
+          {%for i in name:%}
+               <li> {{ i }} </li>
+          {%endfor%}  
+          </ol>
+      </div>
+    </div>
+    </section><!-- End Contact Section -->
+  </main>
+  <!-- ======= Footer ======= -->
+  
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>WhatsApp Text Analyzer And Language Translation</h3>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> wapenquiry@gmail.com<br>
+            </div>
+          </div><!-- End footer info column-->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span> whatsApp Text Analyzer and Language Translation</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+
+  </footer>
+<!-- End Footer -->
+    <!-- End Footer -->
+
+    <a href="" class="scroll-top d-flex align-items-center justify-content-center"><h2>&#8593</h2></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/bootstrap.bundle.min.js"></script>
+  <script src="/static/aos.js"></script>
+  <script src="/static/glightbox.min.js"></script>
+  <script src="/static/isotope.pkgd.min.js"></script>
+  <script src="/static/swiper-bundle.min.js"></script>
+  <script src="/static/purecounter_vanilla.js"></script>
+  <script src="/static/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  <script>
+    var button = document.getElementById("button");
+    var makepdf = document.getElementById("makepdf");
+  
+    button.addEventListener("click", function () {
+        var mywindow = window.open("", "PRINT",  "height=400,width=600");
+        mywindow.document.write(makepdf.innerHTML);
+        mywindow.document.close();
+        mywindow.focus();
+        mywindow.print();
+        mywindow.close();
+  
+        return true;
+    });
+</script>
+</body>
+
+</html>
