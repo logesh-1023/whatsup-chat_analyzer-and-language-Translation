@@ -80,6 +80,25 @@
               <h3>Please Provide Your WhatsApp Chat Exported To Be Analyzed And For Abusive Word Notification</h3>
               <form class="grid" action="/submit" method="post">
                <input type="file" id="Files" name="myFile" value="{{request.form.file}}"><br><br>
+               <h6>Select StopWord</h6>
+               <select name="StopWord" value="{{request.form.stopwordinput}}">
+                <option value="english">english</option>
+                <option value="bulgarian">bulgarian</option>
+                <option value="catalan">catalan</option>
+                <option value="czech">czech</option>
+                <option value="german">german</option>
+                <option value="danish">danish</option>
+                <option value="turkish">turkish</option>
+                <option value="ukrainian">ukrainian</option>
+                <option value="malaysian">malaysian</option>
+                <option value="hebrew">hebrew</option>
+                <option value="spanish">spanish</option>
+                <option value="italian">italian</option>
+                <option value="norwegian">norwegian</option>
+                <option value="portuguese">portuguese</option>
+                <option value="romanian">romanian</option>
+                <option value="hungarian">hungarian</option>
+                <option value="polish">polish</option></select><br><br>
                Enter A Email: <input type="text" id="Image" name=email value={{request.form.email}}><br><br>
                <input type="submit" class="file_submit">
               </form>

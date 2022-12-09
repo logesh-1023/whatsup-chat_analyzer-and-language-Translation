@@ -32,6 +32,7 @@ def submit():
   if request.method=='POST':
     analyze=[] #->RETURN OUTPUT
     nameoffile=request.form['myFile']
+    stopwordinput=request.form["StopWord"]
     list4=[]
     lini=[]
     # imported from current directory
@@ -81,7 +82,7 @@ def submit():
     stop_words = []
     if args.stopword:
         try:
-            with io.open("stop-words/" + args.stopword + ".txt", "r", encoding="utf-8") as file:
+            with io.open(r"E:\WhatsApp-Analyzer-master\WhatsApp-Analyzer-master\stop-words\%s"%stopwordinput,"r", encoding="utf-8") as file:
                 stop_words = [x.strip() for x in file.readlines()]
         except IOError as e:
             print("Stop Words file not found in \"" + args.file + "\" not found.")
@@ -485,7 +486,6 @@ def result():
     # for i in output:
     #     iot.append(i)
     # config = pdfkit.configuration(wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")  
-    # #  N0]+Cn?> ./""<Ṁ /'|
     # pdfkit.from_file('analysis.html','out.pdf')
     return render_template("analysis.html",name=single)
   else:
